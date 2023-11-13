@@ -1,8 +1,13 @@
 <h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<p>Veja a aplicação</p>
 
-<% "Don't show the hello world" %>
+<% "Hello que não aparece" %>
+o valor é <%= "5" %>
 
 <%= "Show the hello world"%>
 
 <%= link_to 'Cidades', '/cities'%>
+<%= link_to 'Cidades 2', '/cities'%>
+
+<h2>cookie <%= cookies[:teste_C] %></h2>
+<h2>session <%= session[:teste_S] %></h2>
