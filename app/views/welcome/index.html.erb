@@ -13,15 +13,11 @@ o valor é <%= "5" %>
 <h2>session <%= session[:teste_S] %></h2>
 
 <p><%= link_to 'English', '/?locale=en' %> </p>
-<<<<<<< HEAD
 <p><%= link_to 'Português', root_path(locale:"pt-BR") %> </p>
 
-<% alert_msg = Time.now.hour < 12? "Bom dia": Time.now < 18 ? "Boa Tarde" : "Boa Noite"%>
+<% alert_msg = Time.now.hour < 12 ? "Bom dia" : Time.now < 18 ? "Boa tarde" : "Boa noite"%>
 
 <script>
 $.notify("<%= alert_msg %>", "success");
 console.log("teste");
 </script>
-=======
-<p><%= link_to 'Português', root_path (locale:"pt-BR") %> </p>
->>>>>>> 5e0e2f144c97b55a32259620b8e247cd7d637638

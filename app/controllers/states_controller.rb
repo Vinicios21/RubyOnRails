@@ -4,8 +4,6 @@ class StatesController < ApplicationController
   # GET /states or /states.json
   def index
     @states = State.all
-    cookies[:teste_C] = "testando 1"
-    session[:teste_S] = "testando 2"
   end
 
   # GET /states/1 or /states/1.json

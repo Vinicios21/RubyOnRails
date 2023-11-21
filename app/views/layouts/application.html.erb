@@ -1,15 +1,60 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <title>Projetinho</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    params[:controller], media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag params[:controller], 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
+    <nav>
+      <div class»"nav-wrapper">
+        <a href=<%=root_path%> class="brand-logo">
+        <i class="large material-icons">home</i>Inicio</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/states">States</a>/li> 
+          <li><%= link_to t('city') , cities_path %> </li>
+          <li><%= link_to 'English', '/?locale=en' %> </li>
+          <li><%= link_to 'Português', root_path(locale: "pt-BR") %> </li>
+        </ul>
+      </div>
+    </nav>
     <%= yield %>
   </body>
+
+  <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Menu de Opções</h5>
+                <p class="grey-text text-lighten-4">Selecione uma das opções seguintes</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Login</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Produto</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Materiais</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+  </footer>
+
 </html>
