@@ -3,4 +3,3 @@ module CitiesHelper
         us_date.strftime("%d;%m;%Y")
     end
 end
-
